@@ -1,0 +1,463 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:Mardoto;
+    /* color:#707070; */
+}
+
+@font-face{
+    font-family:Mardoto;
+    src:url("fonts/Mardoto-Regular.ttf");
+}
+
+ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.map-body{
+    width:1085px;
+    margin:50px auto;
+    display:flex;
+    flex-wrap:wrap;
+    /*    border:1px solid;*/
+}
+
+.qartez{
+    width:760px;
+    height:760px;
+    position:relative;
+    /*    border:1px solid;*/
+}
+
+.region_name{
+    position:absolute;
+    z-index: 11000;
+    font-weight:bold;
+    font-size:17px;
+    cursor:pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* color: #707070; */
+    color: #000;
+    font-family: Mardoto;
+}
+
+.region-0{top: 285px;left: 113px;}
+.region-1{top: 410px;left: 285px;}
+.region-2{top: 360px;left: 115px;}
+.region-3{top: 315px;right: 260px;}
+.region-4{top: 115px;left: 230px;}
+.region-5{top: 290px;left: 271px;}
+.region-6{top: 155px;left: 90px;}
+.region-7{bottom: 146px;right: 90px;}
+.region-8{bottom: 275px;right: 260px;}
+.region-9{top: 345px;left: 240px;font-size: 15px;}
+.region-10{top: 135px;left: 365px;}
+
+
+.qartez>img{
+    position:absolute;
+    transform: scale(0.5) translate(-50%,-50%);
+}
+
+#map_part>img{position: absolute;transform:scale(0.5);}
+
+
+.shirak{top: -47px;left: -54px;}
+.lori{top:-44px;left:27px;}
+.tavush{top:-71px;left:205px;}
+.aragacotn{top:98px;left:-52px;}
+.kotayq{top:107px;left:162px;}
+.gegharquniq{top:61px;left:182px;}
+.erevan{top:303px;left:207px;}
+.armavir{top:277px;left:-18px;}
+.ararat{top:287px;left:124px;}
+.vayoc-dzor{top:320px;left:296px;}
+.syuniq{top:290px;left:410px;}
+
+@keyframes anim {
+    from{transform: translate(0px, 0px) scale(0.5)}
+    to{transform: translate(-15px, -12px) scale(0.5)}
+}
+
+.translate{
+    z-index: 1000!important;
+    animation:anim 0.8s ease 1 forwards;
+}
+
+.region_name_title{
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 100px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.map-info{
+    width:calc(100% - 765px);
+    display:flex;
+    flex-direction:column;
+    /*    border:1px solid;*/
+}
+
+.first-info{
+    display: flex;
+    margin: 115px 0px 50px -220px;
+    position:relative;
+}
+
+.first-info>li>ul{width:100px;}
+
+.first-info>li{
+    text-align: center;
+    padding:0px 30px;
+    /*    border:1px solid;*/
+}
+
+.first-info li img{width:30px;margin-bottom: 5px;}
+
+.first-info>li>ul>li:nth-child(odd){
+    /* font-weight:bold; */
+    font-size:14px;
+    color:#000;
+    padding-bottom:5px;
+}
+
+.first-info>li>ul>li:nth-child(even){
+    color:#e98d13;
+    font-size:12px;
+    padding-bottom:5px;
+}
+
+.second-info{
+    /*    border:1px solid;*/
+    width:300px;
+    margin:0 auto;
+}
+
+.second-info>div>ul{margin:15px 0px;}
+
+.second-info ul{display:flex;align-items: center;}
+
+.icon{margin-right:5px;}
+
+.second-info div ul img{width:45px;}
+
+li.text{font-size:14px;}
+
+li.text>div{padding:2px 0px;}
+
+.ucase{text-transform: uppercase;}
+
+.ucase_bold{text-transform: uppercase;font-weight:bold}
+
+.margin{margin: 5px 0;}
+
+.color{color:#a3162d;}
+
+.loc{text-align: center;}
+
+.loc>img{width:65px;}
+
+.right{text-align: right;}
+
+.mx-height{margin: 20px 0;}
+
+.end{
+    font-size:15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.size{font-size: 12px}
+
+.size-16{font-size:16px;}
+.size-20{font-size:20px;}
+
+.general_border{float: right;margin-top:10px;font-size:13px;}
+
+.third-info{
+    /*    border:1px solid;*/
+    width:100%;
+    display: flex;
+}
+
+.sub-info-right{width:49%}
+
+.sub-info{width:40%}
+
+/*.sub-info{border:1px solid;}*/
+
+.spec{
+    /*    border:1px solid;*/
+    width:465px;
+    font-size:13px;
+    position:relative;
+}
+
+.spec>div{display:flex;margin:5px 0px;}
+
+.spec-title>div.spec-right{height:auto;}
+
+.spec-left{
+    width:175px;
+    text-align: right;
+    margin-right:10px;
+    font-size:15px;
+}
+
+.spec-industry {
+    width: 145px;
+    margin: 0px 35px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.spec-left+p{margin:5px 0px;}
+
+.spec-right{
+    width:calc(100% - 215px);
+    height:40px;
+    display:flex;
+    align-items: center;
+    position:relative;
+    overflow: hidden;
+}
+
+.abs{
+    position:absolute;
+    height:100%;
+    top:0;left:0;
+    z-index: -1;
+}
+
+.hash{
+    height:auto!important;
+}
+
+div.cucanish>.spec-right{width:calc(100% - 215px);}
+
+.spec-right>span:not(.abs){margin-left:15px;color:#fff}
+
+.bg-size{font-size:25px;}
+
+.sm-size{font-size: 13px;}
+
+.cucanish{display:flex;align-items: center;flex-wrap:wrap}
+
+.cucanish-text>div{margin-left:5px;height:auto;color:#707070}
+
+.cucanish div.info{
+    height:auto;
+    border:none!important;
+    margin:2px 0px;
+}
+
+.spec div.cucanish:nth-child(odd)>div.spec-right{
+    /* border:1px solid #e98d13; */
+    /* color:#a3162d; */
+    color:#000;
+}
+
+.spec div.cucanish:nth-child(even)>div.spec-right{
+    /* border:1px solid #a3162d; */
+    color:#e98d13;
+}
+
+.spec div.cucanish:nth-child(odd)>div.spec-right>span{
+    /* color:#a3162d; */
+    color:#000;
+    font-weight: bold;
+}
+
+.spec div.cucanish:nth-child(even)>div.spec-right>span{
+    /* color:#e98d13; */
+    color:#000;
+    font-weight: bold;
+}
+
+.spec div.cucanish:nth-child(odd)>div.spec-right>span.abs{
+    background:#e98d13;
+}
+
+.spec div.cucanish:nth-child(even)>div.spec-right>span.abs{
+    background:#a3162d;
+}
+
+.sectors{
+    /*    border: 1px solid;*/
+    width:280px;
+    /* width:255px; */
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 150px;
+    /* float: right; */
+    /* margin-right: 24px; */
+}
+
+.sectors>div{display:flex;justify-content: space-evenly;}
+
+.sectors>div>div>div{
+    font-size:14px;
+    margin-top: -10px;
+    color:#a3162d;
+}
+.pad_potential{
+    padding: 15px;
+    margin-top: 13px;
+}
+
+.sectors img{margin:0px 2px;width: 65px;}
+
+.textile>img{
+    width: 52px;
+    margin-top: 3px;
+    margin-bottom: 9px;
+}
+
+.success{width:250px;margin: 50px 0px 0px 70px;}
+
+.success p{font-size:14px}
+
+
+@media only screen and (max-width:1111px){
+    .map-body{width: 760px;}
+
+    .map-info{
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .first-info{margin:-215px 0px 0px 0px;}
+}
+
+@media only screen and (max-width:800px){
+    .map-body{width:612px;}
+
+    .qartez {width: 610px;height: 685px;}
+
+    .region_name_title{right: 20px;}
+
+    .region_name {font-size: 13px;}
+
+    .region-0{top: 229px;left: 90px;}
+    .region-1{top: 330px;left: 233px;}
+    .region-2{top: 290px;left: 95px;}
+    .region-3{top: 248px;right: 215px;}
+    .region-4{top: 95px;left: 185px;}
+    .region-5{top: 235px;left: 215px;}
+    .region-6{top: 135px;left: 77px;}
+    .region-7{bottom: 200px;right: 80px;}
+    .region-8{bottom: 295px;right: 210px;}
+    .region-9{top: 275px;left: 195px;font-size: 13px;}
+    .region-10 {top: 105px;left: 295px;}
+
+    .qartez>img{
+        position:absolute;
+        transform: scale(0.4) translate(-75%,-75%);
+    }
+
+    #map_part>img{
+        position: absolute;
+        transform:scale(0.4);
+    }
+
+    .shirak{top: -82px;left: -76px;}
+    .lori{top:-70px;left:-23px;}
+    .tavush{top:-97px;left:124px;}
+    .aragacotn{top:45px;left:-85px;}
+    .kotayq{top:50px;left:101px;}
+    .gegharquniq{top:-3px;left:92px;}
+    .erevan{top:232px;left:156px;}
+    .armavir{top:206px;left:-49px;}
+    .ararat{top:202px;left:64px;}
+    .vayoc-dzor{top:226px;left:203px;}
+    .syuniq{top:172px;left:284px;}
+
+    @keyframes anim {
+        from{transform: translate(0px, 0px) scale(0.4)}
+        to{transform: translate(-15px, -12px) scale(0.4)}
+    }
+
+    .first-info {
+        margin: -190px 0px 0px 0px;
+    }
+
+    .right{text-align: left;}
+
+    .sectors{margin: 70px auto;}
+
+    .li-mek{margin-top:-170px;}
+
+    .li-erku{margin-top:-70px;}
+
+    .third-info {display: block;margin-top:-15px}
+
+    .third-info>div {width: 100%;}
+
+    .second-info {width: 85%;}
+
+    .loc {width: 50%;}
+
+    .end{display:block;}
+
+    .general_border {float: inherit;}
+
+    .success {width:80%;margin: 40px 0px 0px 45px;}
+
+    .first-info>li {padding: 0px 24px;}
+}
+
+
+@media only screen and (max-width:640px){
+    .map-body {width: 460px;}
+
+    .region_name_title {right: 15px;top: 30px;font-size:23px;}
+
+    .qartez {width: 610px;height: 645px;}
+
+    .qartez>img {
+        position: absolute;
+        transform: scale(0.3) translate(-116%,-116%);
+    }
+
+    .region_name {font-size: 12px;}
+
+    .region-0{top: 170px;left: 55px;}
+    .region-1{top: 245px;left: 170px;}
+    .region-2{top: 218px;left: 68px;}
+    .region-3{top: 195px;right: 140px;}
+    .region-4{top: 70px;left: 140px;}
+    .region-5{top: 180px;left: 160px;}
+    .region-6{top: 72px;left: 55px;}
+    .region-7{bottom: 285px;right: 58px;}
+    .region-8{bottom: 355px;right: 150px;}
+    .region-9{top: 209px;left: 148px;font-size: 11px;}
+    .region-10{top: 85px;left: 225px;}
+
+    #map_part>img{transform:scale(0.3);}
+
+    .shirak{top: -114px;left: -94px;}
+    .lori{top:-93px;left:-69px;}
+    .tavush {top: -119px;left: 46px;}
+    .aragacotn{top:-6px;left:-114px;}
+    .kotayq{top:-5px;left:44px;}
+    .gegharquniq{top:-63px;left:5px;}
+    .erevan{top:161px;left:107px;}
+    .armavir{top:137px;left:-77px;}
+    .ararat{top:120px;left:5px;}
+    .vayoc-dzor{top:134px;left:113px;}
+    .syuniq{top:57px;left:162px;}
+
+    @keyframes anim {
+        from{transform: translate(0px, 0px) scale(0.3)}
+        to{transform: translate(-8px, -7px) scale(0.3);}
+    }
+}
